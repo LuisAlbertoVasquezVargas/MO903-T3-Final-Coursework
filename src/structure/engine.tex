@@ -1,16 +1,41 @@
 % src/structure/engine.tex
-
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[margin=1in]{geometry}
 
-% Line spacing configuration
+% Expanded horizontal margins to save vertical space
+\usepackage[top=0.7in, bottom=0.7in, left=0.9in, right=0.9in]{geometry} 
+
 \usepackage{setspace}
-\onehalfspacing 
+\onehalfspacing % Mandatory 1.5 spacing
 
 \usepackage{graphicx}
 \graphicspath{ {./src/img/} }
 
+% --- COMPACT TITLE CONFIGURATION ---
+\usepackage{titling}
+\setlength{\droptitle}{-4em} % Pulls the title block up
+\pretitle{\begin{center}\Huge\bfseries}
+\posttitle{\par\end{center}\vspace{-1.0em}}
+\preauthor{\begin{center}\LARGE}
+\postauthor{\par\end{center}\vspace{-1.5em}}
+\predate{\begin{center}\large\itshape}
+\postdate{\par\end{center}\vspace{1.0em}}
+
+% --- SECTION CONFIGURATION ---
 \usepackage{titlesec}
-\titleformat{\section}{\normalfont\large\bfseries}{\thesection}{1em}{}
+\titleformat{\section}{\normalfont\huge\bfseries}{\thesection}{1em}{}[\titlerule]
+
+% --- ZERO-INDENT ABSTRACT COMMAND ---
+\newcommand{\tightabstract}[1]{
+    \begin{center}
+        {\huge\bfseries Abstract}
+    \end{center}
+    \vspace{0.6em} 
+    {
+        \setlength{\parindent}{0pt} % Kill indentation for the ABT blocks
+        \setlength{\parskip}{0.8em}  % Standard gap between AND/BUT/THEREFORE
+        #1
+    }
+}
+
 \usepackage{hyperref}

@@ -25,8 +25,7 @@ sudo pacman -S texlive-basic texlive-latexextra texlive-fontsrecommended \
 #### 2. One-Line Build & Watch
 Run this from the project root. It prepares the output directory and starts the live-recompile loop:
 ```bash
-mkdir -p output && TEXINPUTS=./src//:./src/img//: \
-latexmk -pdf -pvc -outdir=output src/main.tex
+rm -rf output && mkdir -p output && touch output/.gitkeep && TEXINPUTS=./src//:./src/img//: latexmk -pdf -pvc -f -e '$pdf_previewer="true"' -interaction=nonstopmode -outdir=output src/main.tex
 ```
 
 #### 3. Open Preview
@@ -69,7 +68,7 @@ find src -name "*.tex" -exec cat {} +
 ---
 
 ### ✅ Mandatory Requirements
-- [ ] Font size 11pt + 1.5 Line Spacing
-- [ ] Maximum 2 pages (excluding cover and references)
-- [ ] At least 3 bibliographic references
+- [x] Font size 11pt + 1.5 Line Spacing
+- [x] Maximum 2 pages (excluding cover and references)
+- [x] At least 3 bibliographic references
 - [ ] Final filename: `LuisAlberto-t3.pdf`

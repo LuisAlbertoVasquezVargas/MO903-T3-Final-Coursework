@@ -1,4 +1,4 @@
 % src/sections/methodology.tex
 
 \section{Methodology}
-The proposed model utilizes a [Name of Metaheuristic] approach. The primary objective is to minimize the violation of soft constraints while ensuring all hard constraints (e.g., no room overlaps) are strictly satisfied.
+The proposed framework utilizes a hybrid architecture combining classical search with a Deep Reinforcement Learning (DRL) agent. The DRL agent is trained to act as a heuristic guide, predicting which branches of the search tree are most likely to yield a schedule that satisfies high-priority soft constraints. This "neural pruning" allows the system to ignore low-quality combinations early in the process, significantly reducing the runtime compared to the standard backtracking approach used in the UNI FIIS project.
