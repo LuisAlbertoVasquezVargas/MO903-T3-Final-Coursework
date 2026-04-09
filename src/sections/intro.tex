@@ -1,4 +1,8 @@
 % src/sections/intro.tex
 
 \section{Introduction}
-The Student Timetabling Problem consists of assigning a set of lectures to a limited number of time slots and rooms, respecting various hard and soft constraints. This project focuses on the NP-hard nature of the problem and the necessity of automated solvers.
+The Personalized Student Timetabling Problem (PSTP) is a complex combinatorial challenge where students must navigate institutional constraints—such as prerequisites and seat capacities—alongside personal preferences, including specific instructor choices and optimized daily commutes. 
+
+Historically, this problem has been addressed through backtracking algorithms. A notable practical application was implemented for students at the Facultad de Ingeniería Industrial y de Sistemas (FIIS) at UNI, which successfully served hundreds of students per semester. However, as the search space expands with more courses and nuanced constraints, classical linear programming and exhaustive search methods exhibit poor scaling. 
+
+This work discusses a framework that addresses these limitations by incorporating Artificial Intelligence (AI) into the optimization loop. By leveraging neural-guided heuristics, the proposed system aims to prune search spaces more effectively than traditional methods, ensuring that high-quality, personalized schedules remain computationally feasible even in large-scale academic environments.
