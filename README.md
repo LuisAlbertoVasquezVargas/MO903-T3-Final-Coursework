@@ -1,5 +1,4 @@
 
-```markdown
 # MO903-T3-Final-Coursework
 
 ## Project: Optimization of Student Timetabling
@@ -74,4 +73,3 @@ find src -name "*.tex" -exec cat {} +
 - [ ] Maximum 2 pages (excluding cover and references)
 - [ ] At least 3 bibliographic references
 - [ ] Final filename: `LuisAlberto-t3.pdf`
-```
