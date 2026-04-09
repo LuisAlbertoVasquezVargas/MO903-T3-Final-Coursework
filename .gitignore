@@ -1,0 +1,15 @@
+# LaTeX temporary files
+src/*.aux
+src/*.log
+src/*.out
+src/*.toc
+src/*.synctex.gz
+src/*.fdb_latexmk
+src/*.fls
+
+# PDF output
+src/*.pdf
+
+# OS specific
+.DS_Store
+Thumbs.db
