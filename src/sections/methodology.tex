@@ -1,13 +1,12 @@
 % src/sections/methodology.tex
 
 \section{Methodology and Proposed Solution}
-The proposed project follows a hybrid methodology that integrates classical combinatorial search with neural-guided heuristics. The execution is structured into the following four activities:
+The proposed project follows a hybrid methodology that integrates classical combinatorial search with neural-guided heuristics over a 24-month duration. The execution is structured into the following steps:
 
 \begin{enumerate}
-    \item \textbf{Problem Formalization (Months 1-2):} Define the mathematical model for the PSTP by identifying hard and soft constraints. This stage is based on the classification framework provided by Schaerf \cite{ref1}, which distinguishes between essential institutional rules and individual preferences.
-    \item \textbf{Baseline Algorithm Development (Months 3-4):} Implement a backtracking algorithm optimized for the Student Scheduling Problem. This component utilizes the depth-first search logic discussed by King \cite{ref2} and leverages the experience gained from the previous UNI FIIS project implementation.
-    \item \textbf{Neural Pruning Integration (Months 5-7):} Develop a Deep Reinforcement Learning (DRL) agent to guide the search process. This stage adapts the approach proposed by Bengio et al. \cite{ref3}, using neural networks to predict branch quality and prune the search space.
-    \item \textbf{Validation and Prototyping (Month 8):} Build a web-based interface to test the framework with real-world academic data. The performance will be measured by comparing the reduction in computational time against traditional backtracking methods.
+    \item \textbf{Problem Formalization (Months 1-6):} Define the mathematical model for the PSTP. This stage is based on the classification framework provided by Schaerf \cite{ref1}, identifying hard and soft constraints.
+    \item \textbf{Baseline Algorithm Development (Months 7-12):} Implement a backtracking algorithm optimized for the SSP. This component utilizes the depth-first search logic discussed by King \cite{ref2} and leverages experience from the UNI FIIS project.
+    \item \textbf{Neural Pruning Integration (Months 13-18):} Develop a DRL agent to guide the search process. This adapts the approach proposed by Bengio et al. \cite{ref3}, using neural networks to prune the search space.
+    \item \textbf{System Implementation and JS Web Interface (Months 19-21):} Develop a web-based prototype using a Python backend for the optimization core and JavaScript (JS) for the interactive front-end interface.
+    \item \textbf{Validation and Performance Comparison (Months 22-24):} Test the framework with real-world academic data and measure runtime efficiency against traditional backtracking baselines.
 \end{enumerate}
-
-The software architecture will utilize Python for the DRL training phase and C++ for the high-performance search core.
