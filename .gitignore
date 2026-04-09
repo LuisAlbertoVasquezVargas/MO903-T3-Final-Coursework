@@ -1,4 +1,15 @@
-# LaTeX temporary files
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Ignore everything in the output folder
+output/*
+
+# But do not ignore the final PDF or the .gitkeep
+!output/*.pdf
+!output/.gitkeep
+
+# Optional: Ignore LaTeX build junk in src if you ever compile locally there
 src/*.aux
 src/*.log
 src/*.out
@@ -6,10 +17,3 @@ src/*.toc
 src/*.synctex.gz
 src/*.fdb_latexmk
 src/*.fls
-
-# PDF output
-src/*.pdf
-
-# OS specific
-.DS_Store
-Thumbs.db
