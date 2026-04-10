@@ -1,4 +1,5 @@
 % src/structure/engine.tex
+
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
@@ -39,3 +40,20 @@
 }
 
 \usepackage{hyperref}
+
+% --- ACRONYM MANAGER ---
+\usepackage{etoolbox}
+\newcommand{\newacronym}[3]{%
+  \expandafter\newbool{used#1}%
+  \expandafter\gdef\csname #1\endcsname{%
+    \ifbool{used#1}{#3}{#2 (#3)\global\booltrue{used#1}}%
+  }%
+}
+
+% Define your project acronyms here
+\newacronym{PSTP}{Personalized Student Timetabling Problem}{PSTP}
+\newacronym{UNI}{Universidad Nacional de Ingeniería}{UNI}
+\newacronym{FIIS}{Facultad de Ingeniería Industrial y de Sistemas}{FIIS}
+\newacronym{SSP}{Student Scheduling Problem}{SSP}
+\newacronym{AI}{Artificial Intelligence}{AI}
+\newacronym{DRL}{Deep Reinforcement Learning}{DRL}
