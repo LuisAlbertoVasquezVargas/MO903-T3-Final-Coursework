@@ -43,10 +43,11 @@
 
 % --- ACRONYM MANAGER ---
 \usepackage{etoolbox}
+\usepackage{xspace} % Intelligent spacing helper
 \newcommand{\newacronym}[3]{%
   \expandafter\newbool{used#1}%
   \expandafter\gdef\csname #1\endcsname{%
-    \ifbool{used#1}{#3}{#2 (#3)\global\booltrue{used#1}}\ % Forced space here
+    \ifbool{used#1}{#3}{#2 (#3)\global\booltrue{used#1}}\xspace
   }%
 }
 
@@ -57,3 +58,4 @@
 \newacronym{SSP}{Student Scheduling Problem}{SSP}
 \newacronym{AI}{Artificial Intelligence}{AI}
 \newacronym{DRL}{Deep Reinforcement Learning}{DRL}
+\newacronym{ET}{Educational Timetabling}{ET}
