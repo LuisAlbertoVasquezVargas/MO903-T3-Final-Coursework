@@ -1,10 +1,12 @@
 % src/sections/references.tex
 
 \newpage
-
-% This removes the internal \section* that BibTeX usually forces
+\makeatletter
 \patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+\makeatother
 
 \section{References}
+\vspace{1em}
+
 \bibliographystyle{plain}
 \bibliography{references}
